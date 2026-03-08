@@ -85,7 +85,7 @@ export default function Books() {
   const [error, setError] = useState(null);
 
    useEffect(() => {
-    fetch("/api/getBooks")
+    fetch(`${import.meta.env.VITE_API_URL}/api/getBooks`)
       .then((res) => res.json())
       .then((data) => {
         setBooks(data.books); // matches your controller's { books } response
